@@ -17,11 +17,41 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Add book data here -->
-             
         </tbody>
     </table>
-    <button>add book</button>
+    <button id="add-book">New Book</button>
+    <dialog id="dialog">
+        <form action="dialog">
+            <p>Add a new book</p>
+            <ul>
+                <li>
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title">
+                </li>
+    
+                <li>
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author">
+                </li>
+    
+                <li>
+                    <label for="pages">Number of Pages</label>
+                    <input type="text" id="pages" name="pages">
+                </li>
+    
+                <li>
+                    <label for="read">Read?</label>
+                    <input type="checkbox" id="read" name="read">
+                </li>
+            </ul>
+            </ul>
+
+            <menu>
+                <button type="submit" id="submit">Submit</button>
+                <button type="button" id="cancel-button">Cancel</button>
+            </menu>
+        </form>
+    </dialog>
     <script src="script.js"></script>
 </body>
 </html>

@@ -18,7 +18,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     border-collapse: collapse;
     padding: 0.5em;
-    min-width: 700px;
+    min-width: max-content;
     border-radius: 1em;
     overflow: hidden;
 }
@@ -49,5 +49,83 @@ body {
 }
 
 #add-book {
-    padding: 8px;
+    padding: 0.5em 1.5em;
+    background-color: #009879;
+    border: none;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+dialog {
+    margin: auto;
+    border: none;
+    padding: 2em;
+    border-radius: 2em;
+}
+
+dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+dialog form p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+dialog form ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+dialog form label {
+    color: #373737;
+    padding-bottom: 0.2em;
+}
+
+dialog form input {
+    border: 1px solid #b7b7b7;
+    padding: 0.5em;
+    border-radius: 8px;
+}
+
+dialog menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+dialog menu button {
+    padding: 0.5em 1em;
+}
+
+#cancel-button {
+    padding: 0.5em 1.5em;
+    background-color: #b90733;
+    border: none;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#submit {
+    padding: 0.5em 1.5em;
+    background-color: #009879;
+    border: none;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input, label {
+    display: block;
 }

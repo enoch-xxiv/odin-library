@@ -1,5 +1,8 @@
 const table = document.getElementById("table")
 const tableBody = document.querySelector("#table tbody");
+const addBook = document.querySelector("#add-book")
+const dialog = document.querySelector("#dialog")
+const cancelButton = document.querySelector("#cancel-button")
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -23,3 +26,11 @@ function populateTable() {
 }
 
 library.length > 0 ? populateTable() : table.style.display = "none"
+
+addBook.addEventListener("click", () => {
+    dialog.showModal()
+})
+
+cancelButton.addEventListener("click", () => {
+    dialog.close()
+})
