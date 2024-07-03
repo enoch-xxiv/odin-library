@@ -25,14 +25,41 @@ function updateTableVisibility() {
 updateTableVisibility()
 
 function updateTable() {
-    tableBody.textContent = ""
-    library.forEach((book) => {
+    tableBody.textContent = "";
+    library.forEach((book, index) => {
         let tableRow = document.createElement("tr");
+        tableRow.dataset.index = index;
+
+        let removeButtonTd = document.createElement("td");
+        let removeButton = document.createElement("button");
+        removeButton.classList.add("remove-button")
+        removeButton.textContent = "X";
+        removeButton.addEventListener("click", function() {
+            library.splice(index, 1);
+            updateTable();
+            updateTableVisibility();
+        });
+
+        removeButtonTd.appendChild(removeButton);
+        tableRow.appendChild(removeButtonTd);
+
         for (const property in book) {
             let tableData = document.createElement("td");
-            tableData.textContent = property === "read" ? (book[property] ? "✅" : "❌") : book[property];
+            if (property === "read") {
+                let toggleReadButton = document.createElement("button");
+                toggleReadButton.classList.add("toggle-read-button");
+                toggleReadButton.textContent = book[property] ? "👍" : "👎";
+                toggleReadButton.addEventListener("click", function() {
+                    book.read = !book.read;
+                    updateTable();
+                });
+                tableData.appendChild(toggleReadButton);
+            } else {
+                tableData.textContent = book[property];
+            }
             tableRow.appendChild(tableData);
         }
+
         tableBody.appendChild(tableRow);
     });
 }

@@ -129,3 +129,25 @@ dialog menu button {
 input, label {
     display: block;
 }
+
+.remove-button {
+    padding: 0.3em 0.6em;
+    background-color: #e80840;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-read-button {
+    padding: 0.3em 0.6em;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
